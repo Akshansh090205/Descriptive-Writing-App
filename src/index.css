@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+
+:root {
+  /* Slate values for Light Mode (Standard Tailwind Slate) */
+  --bg-slate-50: #f8fafc;
+  --bg-slate-100: #f1f5f9;
+  --bg-slate-200: #e2e8f0;
+  --bg-slate-300: #cbd5e1;
+  --bg-slate-400: #94a3b8;
+  --bg-slate-500: #64748b;
+  --bg-slate-600: #475569;
+  --bg-slate-700: #334155;
+  --bg-slate-800: #1e293b;
+  --bg-slate-900: #0f172a;
+  --bg-slate-950: #020617;
+
+  /* Indigo values for Light Mode (Standard Indigo Accent) */
+  --color-brand-5: #e0e7ff;
+  --color-brand-10: #c7d2fe;
+  --color-brand-20: #a5b4fc;
+  --color-brand-30: #818cf8;
+  --color-brand-40: #6366f1;
+  --color-brand-50: #4f46e5;
+  --color-brand-60: #4338ca;
+  --color-brand-70: #3730a3;
+  --color-brand-80: #312e81;
+  --color-brand-90: #1e1b4b;
+  --color-brand-95: #090514;
+}
+
+.dark {
+  --bg-slate-50: #27272a;
+  --bg-slate-100: #18181b;
+  --bg-slate-200: #2b2b30;
+  --bg-slate-300: #52525b;
+  --bg-slate-400: #a1a1aa;
+  --bg-slate-500: #a1a1aa;
+  --bg-slate-600: #a1a1aa;
+  --bg-slate-700: #d4d4d8;
+  --bg-slate-800: #222225;
+  --bg-slate-900: #1a1a1c;
+  --bg-slate-950: #121214;
+
+  --color-brand-5: #f0fdf4;
+  --color-brand-10: #dcfce7;
+  --color-brand-20: #bbf7d0;
+  --color-brand-30: #86efac;
+  --color-brand-40: #4ade80;
+  --color-brand-50: #10b981;
+  --color-brand-60: #059669;
+  --color-brand-70: #047857;
+  --color-brand-80: #065f46;
+  --color-brand-90: #064e3b;
+  --color-brand-95: #022c22;
+}
+
+@theme {
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Custom banking-themed color palette maps to the root/dark variables */
+  --color-primary-50: var(--color-indigo-50);
+  --color-primary-100: var(--color-indigo-100);
+  --color-primary-200: var(--color-indigo-200);
+  --color-primary-300: var(--color-indigo-300);
+  --color-primary-400: var(--color-indigo-400);
+  --color-primary-500: var(--color-indigo-500);
+  --color-primary-600: var(--color-indigo-600);
+  --color-primary-700: var(--color-indigo-700);
+  --color-primary-800: var(--color-indigo-800);
+  --color-primary-900: var(--color-indigo-900);
+  --color-primary-950: var(--color-indigo-950);
+
+  /* Redefining slate colors to support dynamic light slate/dark charcoal grey */
+  --color-slate-50: var(--bg-slate-50);
+  --color-slate-100: var(--bg-slate-100);
+  --color-slate-200: var(--bg-slate-200);
+  --color-slate-300: var(--bg-slate-300);
+  --color-slate-400: var(--bg-slate-400);
+  --color-slate-500: var(--bg-slate-500);
+  --color-slate-600: var(--bg-slate-600);
+  --color-slate-700: var(--bg-slate-700);
+  --color-slate-800: var(--bg-slate-800);
+  --color-slate-900: var(--bg-slate-900);
+  --color-slate-950: var(--bg-slate-950);
+
+  /* Redefining indigo colors to support dynamic light blue/dark emerald green */
+  --color-indigo-50: var(--color-brand-5);
+  --color-indigo-100: var(--color-brand-10);
+  --color-indigo-200: var(--color-brand-20);
+  --color-indigo-300: var(--color-brand-30);
+  --color-indigo-400: var(--color-brand-40);
+  --color-indigo-500: var(--color-brand-50);
+  --color-indigo-600: var(--color-brand-60);
+  --color-indigo-700: var(--color-brand-70);
+  --color-indigo-800: var(--color-brand-80);
+  --color-indigo-900: var(--color-brand-90);
+  --color-indigo-950: var(--color-brand-95);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-200;
+  }
+  
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full dark:bg-slate-700;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
+
+/* Pulse animation for timer */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

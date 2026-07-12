@@ -1,0 +1,16 @@
+{
+  "short_name": "DescriptiveAce",
+  "name": "DescriptiveAce – AI descriptive writing coach for banking exams",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#1e3a8a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
