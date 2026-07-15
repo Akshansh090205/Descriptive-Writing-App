@@ -1,55 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Homepage / Dashboard -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://descriptive-writing-app.vercel.app/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Practice Section -->
-  <url>
-    <loc>https://descriptive-writing-app.vercel.app/#practice</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Grammar Section -->
-  <url>
-    <loc>https://descriptive-writing-app.vercel.app/#grammar</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- PYQ Section -->
-  <url>
-    <loc>https://descriptive-writing-app.vercel.app/#pyq</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Vocabulary Section -->
-  <url>
-    <loc>https://descriptive-writing-app.vercel.app/#vocabulary</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Analytics Section -->
-  <url>
-    <loc>https://descriptive-writing-app.vercel.app/#analytics</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
 </urlset>
