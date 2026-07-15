@@ -28,7 +28,7 @@ export const PYQSection: React.FC<PYQSectionProps> = ({ onStartPractice }) => {
   return (
     <div className="space-y-6 text-left animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight">Previous Year Exam Questions</h2>
+        <h2 className="text-2xl font-bold tracking-tight dark:text-indigo-400">Previous Year Exam Questions</h2>
         <p className="text-slate-500 dark:text-slate-400 text-sm">Solve actual essay and letter-writing prompts from previous banking mains papers</p>
       </div>
 
@@ -50,24 +50,24 @@ export const PYQSection: React.FC<PYQSectionProps> = ({ onStartPractice }) => {
           <select
             value={examFilter}
             onChange={(e) => setExamFilter(e.target.value as any)}
-            className="px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:outline-none"
+            className="px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-emerald-500/30 dark:border-emerald-500/20 rounded-xl text-sm focus:outline-none text-emerald-600 dark:text-emerald-400 font-bold"
           >
-            <option value="all">All Exams</option>
-            <option value="SBI PO">SBI PO</option>
-            <option value="IBPS PO">IBPS PO</option>
-            <option value="IBPS SO">IBPS SO</option>
-            <option value="RBI Grade B">RBI Grade B</option>
+            <option value="all" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">All Exams</option>
+            <option value="SBI PO" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">SBI PO</option>
+            <option value="IBPS PO" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">IBPS PO</option>
+            <option value="IBPS SO" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">IBPS SO</option>
+            <option value="RBI Grade B" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">RBI Grade B</option>
           </select>
 
           {/* Year filter */}
           <select
             value={yearFilter}
             onChange={(e) => setYearFilter(e.target.value as any)}
-            className="px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:outline-none"
+            className="px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-emerald-500/30 dark:border-emerald-500/20 rounded-xl text-sm focus:outline-none text-emerald-600 dark:text-emerald-400 font-bold"
           >
-            <option value="all">All Years</option>
-            <option value="2024">2024</option>
-            <option value="2023">2023</option>
+            <option value="all" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">All Years</option>
+            <option value="2024" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">2024</option>
+            <option value="2023" className="text-emerald-600 dark:text-emerald-400 font-semibold bg-white dark:bg-slate-900">2023</option>
           </select>
         </div>
       </div>
@@ -78,11 +78,11 @@ export const PYQSection: React.FC<PYQSectionProps> = ({ onStartPractice }) => {
           filtered.map(topic => (
             <div 
               key={topic.id}
-              className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl p-5 hover:border-indigo-500 hover:shadow-md transition-all flex flex-col justify-between"
+              className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl p-5 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-bold uppercase text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 px-2.5 py-0.5 rounded-full border border-indigo-100/30">
+                  <span className="text-[10px] font-bold uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-0.5 rounded-full border border-emerald-500/10">
                     {topic.exam} ({topic.year})
                   </span>
                   <span className={`text-[10px] font-bold uppercase ${
@@ -93,7 +93,7 @@ export const PYQSection: React.FC<PYQSectionProps> = ({ onStartPractice }) => {
                     {topic.difficulty}
                   </span>
                 </div>
-                <h3 className="font-extrabold text-slate-800 dark:text-slate-100 leading-snug">{topic.title}</h3>
+                <h3 className="font-extrabold text-indigo-600 dark:text-indigo-400 leading-snug transition-colors">{topic.title}</h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-4 leading-relaxed">{topic.description}</p>
               </div>
 

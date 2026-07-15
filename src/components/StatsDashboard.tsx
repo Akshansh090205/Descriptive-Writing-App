@@ -99,7 +99,7 @@ export const StatsDashboard: React.FC = () => {
   return (
     <div className="space-y-8 text-left animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight">Performance Analytics</h2>
+        <h2 className="text-2xl font-bold tracking-tight dark:text-indigo-400">Performance Analytics</h2>
         <p className="text-slate-500 dark:text-slate-400 text-sm">Visualize writing score trends, typing speed averages, and parameter accuracy</p>
       </div>
 
@@ -146,7 +146,7 @@ export const StatsDashboard: React.FC = () => {
         
         {/* Score Trend (2/3 cols) */}
         <div className="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-4">
-          <h3 className="font-extrabold text-sm flex items-center gap-1.5">
+          <h3 className="font-extrabold text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
             <TrendingUp className="w-4 h-4 text-indigo-500" /> Score Progression Trend
           </h3>
           <div className="h-64">
@@ -174,7 +174,7 @@ export const StatsDashboard: React.FC = () => {
 
         {/* Categories Pie Chart (1/3 col) */}
         <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-4">
-          <h3 className="font-extrabold text-sm flex items-center gap-1.5">
+          <h3 className="font-extrabold text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
             <PenTool className="w-4 h-4 text-indigo-500" /> Topic Distribution
           </h3>
           <div className="h-56 flex justify-center">
@@ -202,7 +202,7 @@ export const StatsDashboard: React.FC = () => {
 
         {/* Parameters Strengths (Full row or 2 cols) */}
         <div className="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-6">
-          <h3 className="font-extrabold text-sm flex items-center gap-1.5">
+          <h3 className="font-extrabold text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
             <Award className="w-4 h-4 text-indigo-500" /> Subject-Area Accuracy Ratings
           </h3>
 

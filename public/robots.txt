@@ -1,0 +1,8 @@
+# robots.txt for DescriptiveAce
+# https://descriptive-writing-app.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://descriptive-writing-app.vercel.app/sitemap.xml

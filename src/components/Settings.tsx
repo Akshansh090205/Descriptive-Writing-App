@@ -37,7 +37,7 @@ export const Settings: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto space-y-8 text-left animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight">App Settings</h2>
+        <h2 className="text-2xl font-bold tracking-tight dark:text-indigo-400">App Settings</h2>
         <p className="text-slate-500 dark:text-slate-400 text-sm">Configure your AI engine, visual themes, and local database</p>
       </div>
 

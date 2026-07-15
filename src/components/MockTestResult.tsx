@@ -54,7 +54,7 @@ export const MockTestResult: React.FC<MockTestResultProps> = ({
           <ArrowLeft className="w-5 h-5 text-slate-500" />
         </button>
         <div>
-          <h2 className="text-xl font-extrabold">Mock Test Evaluation Report</h2>
+          <h2 className="text-xl font-extrabold dark:text-indigo-400">Mock Test Evaluation Report</h2>
           <p className="text-xs text-slate-400 mt-0.5">Performance analytics for SBI/IBPS PO descriptive writing simulation.</p>
         </div>
       </div>

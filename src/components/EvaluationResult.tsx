@@ -289,7 +289,7 @@ export const EvaluationResult: React.FC<EvaluationResultProps> = ({
             <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400 rounded-full">
               Evaluation Analysis
             </span>
-            <h2 className="text-xl font-extrabold text-slate-800 dark:text-slate-100 mt-1">
+            <h2 className="text-xl font-extrabold text-indigo-600 dark:text-indigo-400 mt-1">
               {topicTitle}
             </h2>
           </div>
@@ -351,7 +351,7 @@ export const EvaluationResult: React.FC<EvaluationResultProps> = ({
 
         {/* Sub-scores breakdown */}
         <div className="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-4">
-          <h3 className="font-extrabold text-sm border-b border-slate-100 dark:border-slate-800 pb-2">Scoring Parameters Breakdown</h3>
+          <h3 className="font-extrabold text-sm border-b border-slate-100 dark:border-slate-800 pb-2 dark:text-indigo-400">Scoring Parameters Breakdown</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {isEssay ? (
@@ -511,7 +511,7 @@ export const EvaluationResult: React.FC<EvaluationResultProps> = ({
 
             {/* Rewrite Panel Console */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-4 text-left">
-              <h3 className="font-extrabold text-sm flex items-center gap-1.5">
+              <h3 className="font-extrabold text-sm flex items-center gap-1.5 dark:text-indigo-400">
                 <Sparkles className="w-4 h-4 text-indigo-500" /> AI Rewrite Console
               </h3>
               <p className="text-[11px] text-slate-400 leading-normal">
@@ -606,7 +606,7 @@ export const EvaluationResult: React.FC<EvaluationResultProps> = ({
           <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-4 text-left max-w-3xl mx-auto">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
-                <h4 className="font-extrabold text-slate-800 dark:text-slate-100 text-base">Model Practice Response</h4>
+                <h4 className="font-extrabold text-indigo-600 dark:text-indigo-400 text-base">Model Practice Response</h4>
                 <p className="text-xs text-slate-400 mt-0.5">Written under constraints matching SBI PO standards.</p>
               </div>
               <button

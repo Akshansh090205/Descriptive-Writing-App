@@ -174,17 +174,17 @@ export const PracticeSession: React.FC<PracticeSessionProps> = ({ topic, onFinis
             <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400 rounded-full">
               {topic.category.replace('_', ' ')}
             </span>
-            <h2 className="text-xl font-extrabold text-slate-800 dark:text-slate-100 mt-1 max-w-xl truncate">
+            <h2 className="text-xl font-extrabold text-indigo-600 dark:text-indigo-400 mt-1 max-w-xl truncate">
               {topic.title}
             </h2>
           </div>
         </div>
 
         {/* Timer Panel */}
-        <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 px-4 py-2 rounded-2xl shadow-sm">
+        <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-emerald-500/30 dark:border-emerald-500/20 px-4 py-2 rounded-2xl shadow-sm">
           <div className="flex items-center gap-2">
-            <Timer className={`w-4 h-4 ${timeRemaining < 120 ? 'text-rose-500 animate-pulse' : 'text-slate-500'}`} />
-            <span className={`font-mono text-lg font-bold ${timeRemaining < 120 ? 'text-rose-600 animate-pulse-ring' : ''}`}>
+            <Timer className={`w-4 h-4 ${timeRemaining < 120 ? 'text-rose-500 animate-pulse' : 'text-emerald-500'}`} />
+            <span className={`font-mono text-lg font-bold ${timeRemaining < 120 ? 'text-rose-600 animate-pulse-ring' : 'text-emerald-600 dark:text-emerald-400'}`}>
               {formatTime(timeRemaining)}
             </span>
           </div>
@@ -207,7 +207,7 @@ export const PracticeSession: React.FC<PracticeSessionProps> = ({ topic, onFinis
           <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 shadow-sm space-y-4">
             <div>
               <h3 className="font-bold text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">Exam Instruction</h3>
-              <p className="text-sm font-semibold text-slate-800 dark:text-slate-100 mt-1 leading-relaxed">
+              <p className="text-sm font-semibold text-slate-800 dark:text-white mt-1 leading-relaxed">
                 {topic.description}
               </p>
             </div>
@@ -305,7 +305,7 @@ export const PracticeSession: React.FC<PracticeSessionProps> = ({ topic, onFinis
 
           {activeSidebarTab === 'template' && currentTemplate && (
             <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 p-5 rounded-2xl space-y-4 animate-slide-down max-h-[450px] overflow-y-auto">
-              <h4 className="font-extrabold text-sm text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
+              <h4 className="font-extrabold text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
                 <FileText className="w-4 h-4 text-indigo-500" /> Structure: {currentTemplate.title}
               </h4>
               
@@ -384,7 +384,7 @@ export const PracticeSession: React.FC<PracticeSessionProps> = ({ topic, onFinis
               value={text}
               onChange={e => setText(e.target.value)}
               placeholder="Type your exam response here... Ensure you follow the layout rules. Submitting will launch the evaluation coach."
-              className={`w-full p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-2xl shadow-sm outline-none resize-none tracking-normal font-sans leading-relaxed transition-all ${
+              className={`w-full p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-2xl shadow-sm outline-none resize-none tracking-normal font-sans leading-relaxed text-slate-800 dark:text-white transition-all ${
                 fontSize === 'sm' ? 'text-sm' :
                 fontSize === 'base' ? 'text-base' :
                 fontSize === 'lg' ? 'text-lg' : 'text-xl'

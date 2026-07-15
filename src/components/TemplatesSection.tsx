@@ -17,7 +17,7 @@ export const TemplatesSection: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6 text-left animate-fade-in">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight">Writing Formats & Layout Templates</h2>
+        <h2 className="text-2xl font-bold tracking-tight dark:text-indigo-400">Writing Formats & Layout Templates</h2>
         <p className="text-slate-500 dark:text-slate-400 text-sm">Review standard layout structure scoring templates for Essays and Letters</p>
       </div>
 
@@ -45,7 +45,7 @@ export const TemplatesSection: React.FC = () => {
           {/* Left 2 Cols: Layout Breakdown */}
           <div className="lg:col-span-2 space-y-4">
             <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 p-5 rounded-2xl space-y-2">
-              <h3 className="font-extrabold text-slate-800 dark:text-slate-100">{selectedTemplate.title}</h3>
+              <h3 className="font-extrabold text-emerald-600 dark:text-emerald-400">{selectedTemplate.title}</h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{selectedTemplate.description}</p>
             </div>
 

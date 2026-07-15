@@ -225,17 +225,17 @@ export const MockTestSession: React.FC<MockTestSessionProps> = ({
             <ArrowLeft className="w-5 h-5 text-slate-500" />
           </button>
           <div>
-            <h2 className="text-xl font-extrabold flex items-center gap-1.5">
-              Descriptive Mock Test <span className="text-xs uppercase bg-indigo-600 text-white font-bold px-2 py-0.5 rounded-full">Exam Mode</span>
+            <h2 className="text-xl font-extrabold flex items-center gap-1.5 dark:text-indigo-400">
+              Descriptive Mock Test <span className="text-xs uppercase bg-indigo-600 text-white font-bold px-2 py-0.5 rounded-full animate-pulse">Exam Mode</span>
             </h2>
             <p className="text-slate-400 text-xs mt-0.5">Solve both prompts within the consolidated 30-minute block.</p>
           </div>
         </div>
 
         {/* Timer Console */}
-        <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 py-2.5 rounded-2xl shadow-sm self-start md:self-center">
-          <Timer className={`w-4 h-4 ${timeRemaining < 180 ? 'text-rose-500 animate-pulse' : 'text-indigo-500'}`} />
-          <span className={`font-mono text-base font-extrabold tracking-wider ${timeRemaining < 180 ? 'text-rose-500 font-black' : ''}`}>
+        <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-emerald-500/30 dark:border-emerald-500/20 px-4 py-2.5 rounded-2xl shadow-sm self-start md:self-center">
+          <Timer className={`w-4 h-4 ${timeRemaining < 180 ? 'text-rose-500 animate-pulse' : 'text-emerald-500'}`} />
+          <span className={`font-mono text-base font-extrabold tracking-wider ${timeRemaining < 180 ? 'text-rose-500 font-black' : 'text-emerald-600 dark:text-emerald-400'}`}>
             {formatTime(timeRemaining)}
           </span>
           <button 
@@ -430,14 +430,14 @@ export const MockTestSession: React.FC<MockTestSessionProps> = ({
                     value={essayText}
                     onChange={(e) => setEssayText(e.target.value)}
                     placeholder="Type your essay introduction, body, and conclusion paragraphs here..."
-                    className={`w-full min-h-[350px] bg-slate-50/50 dark:bg-slate-950/30 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-${settings.fontSize} font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-y leading-relaxed`}
+                    className={`w-full min-h-[350px] bg-slate-50/50 dark:bg-slate-950/30 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-${settings.fontSize} font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-y leading-relaxed text-slate-800 dark:text-white`}
                   />
                 ) : (
                   <textarea
                     value={letterText}
                     onChange={(e) => setLetterText(e.target.value)}
                     placeholder="Type your formal/informal letter formatting (Sender address, date, subject, salutation, body paragraphs, sign-off) here..."
-                    className={`w-full min-h-[350px] bg-slate-50/50 dark:bg-slate-950/30 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-${settings.fontSize} font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-y leading-relaxed`}
+                    className={`w-full min-h-[350px] bg-slate-50/50 dark:bg-slate-950/30 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-${settings.fontSize} font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-y leading-relaxed text-slate-800 dark:text-white`}
                   />
                 )}
               </div>
@@ -447,7 +447,7 @@ export const MockTestSession: React.FC<MockTestSessionProps> = ({
             {showLayoutHelper && activeTemplate && (
               <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-5 rounded-3xl space-y-4 animate-slide-up">
                 <div className="flex justify-between items-center border-b pb-2">
-                  <h3 className="font-extrabold text-xs text-slate-700 dark:text-slate-300">Format Structure: {activeTemplate.title}</h3>
+                  <h3 className="font-extrabold text-xs text-emerald-600 dark:text-emerald-400">Format Structure: {activeTemplate.title}</h3>
                   <button 
                     onClick={() => setShowLayoutHelper(false)}
                     className="text-xs font-bold text-slate-400 hover:text-slate-600"

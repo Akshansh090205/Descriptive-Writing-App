@@ -419,8 +419,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ onStartPractice, setView, 
           {/* History Widget */}
           <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 shadow-sm space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="font-bold flex items-center gap-2">
-                <History className="w-4 h-4 text-indigo-500" /> Recent Attempts
+              <h3 className="font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                <History className="w-4 h-4 text-emerald-500" /> Recent Attempts
               </h3>
               {history.length > 0 && (
                 <button
@@ -484,7 +484,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onStartPractice, setView, 
             </div>
             
             <div className="space-y-1.5">
-              <h4 className="text-lg font-extrabold text-slate-800 dark:text-slate-100">Ameliorate</h4>
+              <h4 className="text-lg font-extrabold text-indigo-600 dark:text-indigo-400">Ameliorate</h4>
               <p className="text-xs italic text-indigo-500 font-semibold">verb</p>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 To make something bad or unsatisfactory better.
@@ -493,7 +493,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onStartPractice, setView, 
             
             <div className="bg-white/80 dark:bg-slate-800/80 rounded-lg p-2.5 border border-indigo-100/20">
               <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wide">Banking Example</p>
-              <p className="text-[11px] text-slate-600 dark:text-slate-300 italic mt-0.5">
+              <p className="text-[11px] text-slate-700 dark:text-slate-200 italic mt-0.5">
                 "Deploying digital banking correspondents helped ameliorate the difficulty of access to physical bank branches..."
               </p>
             </div>
@@ -501,7 +501,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onStartPractice, setView, 
           
           {/* Practice Advice Box */}
           <div className="border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 bg-white dark:bg-slate-900 space-y-2">
-            <h4 className="text-sm font-bold">Descriptive Writing Exam Tips</h4>
+            <h4 className="text-sm font-bold text-emerald-600 dark:text-emerald-400">Descriptive Writing Exam Tips</h4>
             <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
               <li>Write clean introduction, middle arguments, and summary paragraphs.</li>
               <li>Avoid abbreviations like "don't" or "can't" in formal letters.</li>
